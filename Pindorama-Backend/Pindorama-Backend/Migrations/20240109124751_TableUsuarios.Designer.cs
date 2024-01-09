@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pindorama_Backend.Context;
 
@@ -10,9 +11,11 @@ using Pindorama_Backend.Context;
 namespace Pindorama_Backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240109124751_TableUsuarios")]
+    partial class TableUsuarios
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,36 +35,6 @@ namespace Pindorama_Backend.Migrations
                     b.HasIndex("PassagensPassagemId");
 
                     b.ToTable("PacotePassagem");
-                });
-
-            modelBuilder.Entity("PacoteViagem", b =>
-                {
-                    b.Property<int>("PacotesPacoteId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ViagensViagemId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PacotesPacoteId", "ViagensViagemId");
-
-                    b.HasIndex("ViagensViagemId");
-
-                    b.ToTable("PacoteViagem");
-                });
-
-            modelBuilder.Entity("PassagemViagem", b =>
-                {
-                    b.Property<int>("PassagensPassagemId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ViagensViagemId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PassagensPassagemId", "ViagensViagemId");
-
-                    b.HasIndex("ViagensViagemId");
-
-                    b.ToTable("PassagemViagem");
                 });
 
             modelBuilder.Entity("Pindorama_Backend.Models.Pacote", b =>
@@ -176,28 +149,6 @@ namespace Pindorama_Backend.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("Pindorama_Backend.Models.Viagem", b =>
-                {
-                    b.Property<int>("ViagemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Datacompra")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<decimal>("PrecoTotal")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ViagemId");
-
-                    b.HasIndex("UsuarioId");
-
-                    b.ToTable("Viagens");
-                });
-
             modelBuilder.Entity("PacotePassagem", b =>
                 {
                     b.HasOne("Pindorama_Backend.Models.Pacote", null)
@@ -211,52 +162,6 @@ namespace Pindorama_Backend.Migrations
                         .HasForeignKey("PassagensPassagemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("PacoteViagem", b =>
-                {
-                    b.HasOne("Pindorama_Backend.Models.Pacote", null)
-                        .WithMany()
-                        .HasForeignKey("PacotesPacoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Pindorama_Backend.Models.Viagem", null)
-                        .WithMany()
-                        .HasForeignKey("ViagensViagemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("PassagemViagem", b =>
-                {
-                    b.HasOne("Pindorama_Backend.Models.Passagem", null)
-                        .WithMany()
-                        .HasForeignKey("PassagensPassagemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Pindorama_Backend.Models.Viagem", null)
-                        .WithMany()
-                        .HasForeignKey("ViagensViagemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Pindorama_Backend.Models.Viagem", b =>
-                {
-                    b.HasOne("Pindorama_Backend.Models.Usuario", "Usuario")
-                        .WithMany("Viagens")
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("Pindorama_Backend.Models.Usuario", b =>
-                {
-                    b.Navigation("Viagens");
                 });
 #pragma warning restore 612, 618
         }

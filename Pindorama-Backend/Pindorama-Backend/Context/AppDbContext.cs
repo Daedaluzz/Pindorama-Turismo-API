@@ -25,9 +25,14 @@ namespace Pindorama_Backend.Context
             modelBuilder.Entity<Passagem>()
                 .Property(p => p.Terminal)
                 .HasConversion<string>();
+            modelBuilder.Entity<Usuario>()
+                .Property(p => p.TipoUsuario)
+                .HasConversion<string>();
         }
         public DbSet<Passagem> Passagens { get; set; }
         public DbSet<Pacote> Pacotes { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Viagem> Viagens { get; set; }
 
 
     }
