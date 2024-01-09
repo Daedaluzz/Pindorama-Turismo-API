@@ -1,0 +1,57 @@
+:root {
+  --brasil-white-rgb: 249, 252, 248;
+  /*#F9FCF8*/
+  --tabatinga-white-rgb: 242, 242, 242;
+  /*#F2F2F2*/
+  --brasil-green-rgb: 0, 157, 58;
+  /*#009D3A*/
+  --brasil-yellow-rgb: 254, 223, 1;
+  /*#FFCA00*/
+  --saffron-yellow-rgb: 244, 196, 48;
+  /*#F4CA30*/
+  --urucum-red-rgb: 236, 35, 0;
+  /*#EC2300*/
+  --brasil-blue-rgb: 01, 38, 118;
+  /*#012676*/
+  --jenipapo-black-rgb: 34, 36, 38;
+  /*#222426*/
+  --max-width: 1100px;
+  --border-radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  animation: animation1 1 ease-in-out;
+  font-family: 'Outfit', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* color: rgb(var(--jenipapo-black-rgb)); */
+  color: white;
+  background-color: rgb(var(--jenipapo-black-rgb));
+}
+
+body {
+  margin: 0;
+    font-family: outfit, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

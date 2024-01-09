@@ -6,30 +6,29 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pindorama_Backend.Context;
-using Pindorama_Backend.Enums;
 using Pindorama_Backend.Models;
 
 namespace Pindorama_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PassagemsController : ControllerBase
+    public class PassagensController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public PassagemsController(AppDbContext context)
+        public PassagensController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Passagems
+        // GET: api/Passagens
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Passagem>>> GetPassagens()
         {
             return await _context.Passagens.ToListAsync();
         }
 
-        // GET: api/Passagems/5
+        // GET: api/Passagens/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Passagem>> GetPassagem(int id)
         {
@@ -43,7 +42,7 @@ namespace Pindorama_Backend.Controllers
             return passagem;
         }
 
-        // PUT: api/Passagems/5
+        // PUT: api/Passagens/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPassagem(int id, Passagem passagem)
@@ -74,19 +73,18 @@ namespace Pindorama_Backend.Controllers
             return NoContent();
         }
 
-        // POST: api/Passagems
+        // POST: api/Passagens
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Passagem>> PostPassagem(Passagem passagem)
         {
-          
             _context.Passagens.Add(passagem);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPassagem", new { id = passagem.PassagemId }, passagem);
         }
 
-        // DELETE: api/Passagems/5
+        // DELETE: api/Passagens/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePassagem(int id)
         {

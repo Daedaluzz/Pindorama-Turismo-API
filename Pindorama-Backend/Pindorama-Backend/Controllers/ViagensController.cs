@@ -12,23 +12,23 @@ namespace Pindorama_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ViagemsController : ControllerBase
+    public class ViagensController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public ViagemsController(AppDbContext context)
+        public ViagensController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Viagems
+        // GET: api/Viagens
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Viagem>>> GetViagens()
         {
             return await _context.Viagens.ToListAsync();
         }
 
-        // GET: api/Viagems/5
+        // GET: api/Viagens/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Viagem>> GetViagem(int id)
         {
@@ -42,7 +42,7 @@ namespace Pindorama_Backend.Controllers
             return viagem;
         }
 
-        // PUT: api/Viagems/5
+        // PUT: api/Viagens/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutViagem(int id, Viagem viagem)
@@ -122,8 +122,7 @@ namespace Pindorama_Backend.Controllers
             return NoContent();
         }
 
-
-        // POST: api/Viagems
+        // POST: api/Viagens
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Viagem>> PostViagem(Viagem viagem)
@@ -134,7 +133,7 @@ namespace Pindorama_Backend.Controllers
             return CreatedAtAction("GetViagem", new { id = viagem.ViagemId }, viagem);
         }
 
-        // DELETE: api/Viagems/5
+        // DELETE: api/Viagens/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteViagem(int id)
         {
