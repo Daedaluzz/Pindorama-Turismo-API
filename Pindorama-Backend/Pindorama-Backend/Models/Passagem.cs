@@ -1,4 +1,5 @@
 ﻿using Pindorama_Backend.Enums;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,7 +8,11 @@ namespace Pindorama_Backend.Models
     [Table("Passagens")]
     public class Passagem
     {
-        public Passagem() { }
+        public Passagem()
+        {
+
+            Pacotes = new HashSet<Pacote>();
+        }
 
         [Key]
         public int PassagemId { get; set; }
@@ -27,6 +32,8 @@ namespace Pindorama_Backend.Models
         public DateTime Embarque { get; set; }
         [Column(TypeName = "decimal(10,2)")]
         public Decimal Preco { get; set; }
+
+        public ICollection<Pacote> Pacotes { get; set; }
 
 
 

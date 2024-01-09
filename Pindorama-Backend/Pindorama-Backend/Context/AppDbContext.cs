@@ -27,6 +27,7 @@ namespace Pindorama_Backend.Context
                 .HasConversion<string>();
         }
         public DbSet<Passagem> Passagens { get; set; }
+        public DbSet<Pacote> Pacotes { get; set; }
 
 
     }

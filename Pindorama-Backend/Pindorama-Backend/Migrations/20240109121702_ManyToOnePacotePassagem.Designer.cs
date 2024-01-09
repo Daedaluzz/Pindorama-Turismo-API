@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pindorama_Backend.Context;
 
@@ -10,29 +11,16 @@ using Pindorama_Backend.Context;
 namespace Pindorama_Backend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240109121702_ManyToOnePacotePassagem")]
+    partial class ManyToOnePacotePassagem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("PacotePassagem", b =>
-                {
-                    b.Property<int>("PacotesPacoteId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PassagensPassagemId")
-                        .HasColumnType("int");
-
-                    b.HasKey("PacotesPacoteId", "PassagensPassagemId");
-
-                    b.HasIndex("PassagensPassagemId");
-
-                    b.ToTable("PacotePassagem");
-                });
 
             modelBuilder.Entity("Pindorama_Backend.Models.Pacote", b =>
                 {
@@ -92,6 +80,9 @@ namespace Pindorama_Backend.Migrations
                     b.Property<int>("NumeroBilhete")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PacoteId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Portao")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -105,22 +96,21 @@ namespace Pindorama_Backend.Migrations
 
                     b.HasKey("PassagemId");
 
+                    b.HasIndex("PacoteId");
+
                     b.ToTable("Passagens");
                 });
 
-            modelBuilder.Entity("PacotePassagem", b =>
+            modelBuilder.Entity("Pindorama_Backend.Models.Passagem", b =>
                 {
                     b.HasOne("Pindorama_Backend.Models.Pacote", null)
-                        .WithMany()
-                        .HasForeignKey("PacotesPacoteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Passagens")
+                        .HasForeignKey("PacoteId");
+                });
 
-                    b.HasOne("Pindorama_Backend.Models.Passagem", null)
-                        .WithMany()
-                        .HasForeignKey("PassagensPassagemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            modelBuilder.Entity("Pindorama_Backend.Models.Pacote", b =>
+                {
+                    b.Navigation("Passagens");
                 });
 #pragma warning restore 612, 618
         }

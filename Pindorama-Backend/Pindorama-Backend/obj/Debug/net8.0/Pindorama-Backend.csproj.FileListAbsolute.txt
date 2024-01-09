@@ -5,14 +5,18 @@ F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Back
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.csproj.CoreCompileInputs.cache
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.MvcApplicationPartsAssemblyInfo.cs
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.MvcApplicationPartsAssemblyInfo.cache
+F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.sourcelink.json
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\appsettings.Development.json
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\appsettings.json
+F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.staticwebassets.runtime.json
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.exe
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.deps.json
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.runtimeconfig.json
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.dll
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.pdb
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Humanizer.dll
+F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.Build.dll
@@ -229,6 +233,3 @@ F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Back
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.pdb
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\Pindorama-Backend.genruntimeconfig.cache
 F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\obj\Debug\net8.0\ref\Pindorama-Backend.dll
-F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Pindorama-Backend.staticwebassets.runtime.json
-F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
-F:\RealProjects\Pindorama\Pindorama-Turismo-API\Pindorama-Backend\Pindorama-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
