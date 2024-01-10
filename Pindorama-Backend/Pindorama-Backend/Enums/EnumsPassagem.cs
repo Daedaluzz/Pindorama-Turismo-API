@@ -1,5 +1,26 @@
 ﻿namespace Pindorama_Backend.Enums
 {
+    public enum Portao
+    {
+        P201,
+        P202,
+        P203,
+        P204,
+        P205,
+        P206,
+        P207,
+        P208,
+        P209,
+        P2010,
+    }
+     public enum Terminal
+    {
+        Terminal01,
+        Terminal02,
+        Terminal03,
+        Terminal04,
+        Terminal05,
+    }
     public enum Assento
     {
         A22,
@@ -27,4 +48,5 @@
         A44,
         A45,
     }
+
 }

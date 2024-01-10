@@ -21,7 +21,7 @@ namespace Pindorama_Backend.Models
         [Required]
         public string Email { get; set; }
         [Required]
-        public string telefone { get; set; }
+        public string Telefone { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateOnly DataNascimento { get; set; }

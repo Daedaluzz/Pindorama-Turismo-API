@@ -36,6 +36,7 @@ h1 {
   font-size: 4rem;
 }
 
+/*TABLE*/
 table {
   border-collapse: collapse;
   background-color: rgba(var(--jenipapo-black-rgb), 0.5);
@@ -82,15 +83,114 @@ th {
   text-shadow: .1rem .2rem .2rem #0000003a;
 }
 
-.buttons a:nth-child(1) {}
-
-.buttons a:nth-child(2) {}
-
-
 .buttons a:nth-child(1):hover {
   background-color: rgba(var(--brasil-blue-rgb), 0.8);
 }
 
 .buttons a:nth-child(2):hover {
   background-color: rgba(var(--urucum-red-rgb), 0.8);
+}
+
+/*FORM*/
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 50rem;
+  gap: 1rem;
+}
+
+input {
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: solid 0.5px rgb(var(--jenipapo-black-rgb));
+  padding: 1rem 2rem;
+  color: rgb(var(--jenipapo-black-rgb));
+  font-size: 1.6rem;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(var(--saffron-yellow-rgb), 1);
+  font-weight: bold;
+
+
+}
+
+.checks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border: solid 1px rgb(var(--jenipapo-black-rgb));
+  border-radius: .5rem;
+}
+
+.checks label {
+  font-size: 1.5rem;
+}
+
+.checks span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checks input {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.5rem;
+}
+
+select {
+  height: 4rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: solid 0.5px rgb(var(--jenipapo-black-rgb));
+  padding: 1rem 2rem;
+  color: rgb(var(--jenipapo-black-rgb));
+  font-size: 1.5rem;
+
+}
+
+button {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  color: rgb(var(--tabatinga-white-rgb));
+  background-color: rgb(var(--brasil-green-rgb));
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+filter: brightness(0.8);
+
+}
+
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+.terminal:first-child {
+  color: var(--blue);
+}
+
+.terminal:nth-child(2) {
+  color: orange;
+}
+
+.terminal:nth-child(3) {
+  color: var(--yellow);
+}
+
+.terminal:nth-child(4) {
+  color: green;
+}
+
+.terminal:nth-child(5) {
+  color: magenta;
 }

@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect } from "react"
 import Sidebar from './components/sidebar/sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {Usuarios, UsuariosCadastro, UsuariosBuscarId} from './pages/usuarios';
+import {Usuarios, UsuariosCadastro, UsuariosBuscarId, UsuariosEditar} from './pages/usuarios';
 
 function App() {
 
@@ -15,7 +15,8 @@ function App() {
       <Sidebar />
       <Routes>
         <Route path='/usuarios' element={<Usuarios/>} />
-        <Route path='/usuarios' element={<UsuariosCadastro/>} />
+        <Route path='/usuarios/cadastrar' element={<UsuariosCadastro/>} />
+        <Route path='/usuarios/editar/:id' element={<UsuariosEditar />} />
         <Route path='/usuarios' element={<UsuariosBuscarId/>} />
       </Routes>
     </div>

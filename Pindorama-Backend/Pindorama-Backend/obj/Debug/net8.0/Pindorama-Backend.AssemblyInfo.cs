@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pindorama-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ed13ec79d8f8ba5b758ee2561c918e9b0c6e2ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc0ff3939bc2a7811e2f9bbc3cbfe32a621416c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pindorama-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pindorama-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
