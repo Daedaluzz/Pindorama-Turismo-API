@@ -29,7 +29,7 @@ a {
   font-size: clamp(1.5rem, 1.5vw, 2rem);
   align-self: flex-end;
   padding: 2rem;
-  gap: 5rem;
+  gap: 1rem;
 }
 
 h1 {
@@ -42,6 +42,11 @@ table {
   background-color: rgba(var(--jenipapo-black-rgb), 0.5);
   backdrop-filter: blur(1rem);
   border-radius: 0.5rem;
+}
+
+thead tr td {
+  text-align: center;
+  font-weight: bold;
 }
 
 th,
@@ -77,10 +82,9 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5rem;
+  padding: .5rem 1rem;
   font-weight: bold;
   color: rgb(var(--tabatinga-white-rgb));
-  text-shadow: .1rem .2rem .2rem #0000003a;
 }
 
 .buttons a:nth-child(1):hover {
@@ -95,9 +99,14 @@ th {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   width: 100%;
   max-width: 50rem;
   gap: 1rem;
+  background-color: rgba(var(--jenipapo-black-rgb), 0.5);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
 }
 
 input {
@@ -157,7 +166,6 @@ button {
   width: 100%;
   height: 4rem;
   border-radius: 0.5rem;
-  margin-bottom: 4rem;
   font-size: 2rem;
   color: rgb(var(--tabatinga-white-rgb));
   background-color: rgb(var(--brasil-green-rgb));
@@ -166,7 +174,7 @@ button {
 }
 
 button:hover {
-filter: brightness(0.8);
+  filter: brightness(0.8);
 
 }
 
@@ -175,22 +183,73 @@ fieldset {
   border: none;
 }
 
-.terminal:first-child {
-  color: var(--blue);
+select:focus {
+  outline: none;
+  background-color: rgba(var(--saffron-yellow-rgb), 1);
+  font-weight: bold;
 }
 
-.terminal:nth-child(2) {
-  color: orange;
+/*USUARIO DETAILS*/
+.btnBuscar {
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
-.terminal:nth-child(3) {
-  color: var(--yellow);
+section {
+  width: 80%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--jenipapo-black-rgb), 0.5);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+  padding: 2rem 0;
 }
 
-.terminal:nth-child(4) {
-  color: green;
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-.terminal:nth-child(5) {
-  color: magenta;
+h3 {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: solid 0.1rem rgba(var(--tabatinga-white-rgb), 0.5);
+  color: rgba(var(--saffron-yellow-rgb), 1);
+}
+
+h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgba(var(--saffron-yellow-rgb), 1);
+}
+
+p {}
+
+h5 {
+  margin-bottom: -10px;
+  font-size: 1.6rem;
+  color: rgba(var(--saffron-yellow-rgb), 1);
+}
+
+.element {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.element2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }

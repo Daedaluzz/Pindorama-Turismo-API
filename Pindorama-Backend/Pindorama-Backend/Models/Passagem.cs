@@ -10,6 +10,7 @@ namespace Pindorama_Backend.Models
         public Passagem()
         {
             Viagens = new HashSet<Viagem>();
+            Pacotes = new HashSet<Pacote>();
         }
 
         [Key]

@@ -28,6 +28,16 @@ namespace Pindorama_Backend.Context
             modelBuilder.Entity<Usuario>()
                 .Property(p => p.TipoUsuario)
                 .HasConversion<string>();
+
+            // Configure many-to-many join table
+            modelBuilder.Entity<Pacote>()
+                .HasMany(p => p.Passagens)
+                .WithMany(p => p.Pacotes)
+                .UsingEntity(j => j.ToTable("PacotePassagem"));
+
+            // Additional configurations...
+
+            base.OnModelCreating(modelBuilder);
         }
         public DbSet<Passagem> Passagens { get; set; }
         public DbSet<Pacote> Pacotes { get; set; }

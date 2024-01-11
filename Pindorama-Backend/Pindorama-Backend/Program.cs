@@ -8,7 +8,12 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 {
     // serialize enums as strings in api responses
     x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+
 });
+
+//serialization of circular references
+//builder.Services.AddControllers().AddJsonOptions(x =>
+  // x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
 
 // Add services to the container.
 
